@@ -1,0 +1,12 @@
+
+<div class="container mx-auto text-center">
+	<div class="text-xl font-bold">Zrenjanin, Serbia</div>
+	<br />
+	<p><%=Date.today.strftime("%A, %B, %d")%></p>
+	<img src="http://openweathermap.org/img/wn/<%= @data["weather"].first["icon"]%>@2x.png" class="mx-auto"/> 
+	
+<p><%= @data["weather"].first["main"]%></p>
+<p><%= @data["weather"].first["description"]%></p>
+	
+<p><%= @data["main"]["temp"]%> ℃</p>
+</div>
